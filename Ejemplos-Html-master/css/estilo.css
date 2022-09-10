@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(44, 88, 88);
+}
+
+h1{
+    color:black;
+    text-align: center;
+}
+
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: darkgray;
+}
+
+table{
+    width: 100%;
+    border-spacing: 5px;
+}
+
+table, th, td{
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+th{
+    background-color:blueviolet ;
+    text-align: center;
+}
+td{
+    background-color: coral;
+    text-align: center;
+    padding: 4px;
+
+}
