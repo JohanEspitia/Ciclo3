@@ -1,13 +1,17 @@
 .colorblanco{
-    color: white;
+color: #B3B6B7 ;
 }
 
 .fondo{
-    background-color: rgb(54, 50, 50);
+    background-color: #E5E7E9;
 }
 
 .centrado{
     text-align: center;
+}
+
+.izquierda{
+    text-align: left;
 }
 
 .tabla{
@@ -16,9 +20,9 @@
 }
 
 .enctabla{
-    padding: 5px;
-    border-bottom: 1px solid white;
-    text-align: center;
+padding: 5px;
+border-bottom: 1px solid;
+text-align: center;   
 }
 
 .menu{
@@ -26,27 +30,30 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(49, 49, 39);
+    background-color:  #B3B6B7;
+    
+}
+
+.imagenes{
+    
+    width: 80;
+    height: 80;
 }
 
 li{
-    float: left;
+    float: left; 
 }
 
 li a{
     display: block;
-    color: bisque;
+    color: white;
     text-align: center;
     padding: 15px;
     text-decoration: none;
-    font-family: cursive;
+    font-family: Tahoma;
 }
 
 li a:hover{
-    background-color: rgb(49, 24, 24);
+    background-color: #797D7F;
 }
 
-.imagenes{
-    width: 80;
-    height: 80;
-}

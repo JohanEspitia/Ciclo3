@@ -1,11 +1,11 @@
 .fondo{
-    background-color: rgb(30, 62, 63);
+    background-color: cadetblue;
 }
 
 .titulos{
     color: white;
     text-align: center;
-    font-family: 'Franklin Gothic Medium';
+    font-family: Tahoma;
     font-size: 25px;
 }
 
@@ -14,8 +14,8 @@
     padding: 20px;
     border-radius: 10px;
     margin: auto;
-    background-color: cornflowerblue;
-    font-family: cursive;
+    background-color: coral;
+    font-family: Tahoma;
 }
 
 form input{
@@ -26,7 +26,8 @@ form input{
     display: inline-block;
 }
 
+
 .botones{
     text-align: center;
-    font-weight:bolder;
+    font-weight: bold;
 }
