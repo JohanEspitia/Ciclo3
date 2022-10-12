@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<pre>
+</pre>
+
+<!-- Title page -->
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('static/images/bg-02.jpg');">
+    <h2 class="ltext-105 cl2 txt-center">
+        Gestión de Usuarios
+    </h2>
+</section>
+
+
+<!-- Content page -->
+<section class="bg0 p-t-104 p-b-116">
+    <div class="container">
+        <div class="flex-w flex-tr">
+            <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+       
+
+                <form action="{{url_for('asignar', id=dato[0])}}" method="POST">
+                    <h4 class="mtext-105 cl2 txt-center p-b-30">
+                        Gestionar Usuario [Editar]
+                    </h4>
+
+                    <div class="bor8 m-b-20 how-pos4-parent">
+                            <!-- <label for="email">Email</label> -->
+                            <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" placeholder="{{dato[1]}}" disabled>
+                            <img class="how-pos4 pointer-none" src="{{url_for('static',filename='images/icons/icon-user.png')}}" alt="ICON" height="25"
+                                style="opacity:0.25;">
+                        </div>
+
+                        <div class="bor8 m-b-20 how-pos4-parent">
+                           
+                            <input   class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" placeholder="{{dato[2]}}" disabled>
+                            <img class="how-pos4 pointer-none" src="{{url_for('static',filename='images/icons/icon-user.png')}}" alt="ICON" height="25"
+                                style="opacity:0.25;">
+                        </div>
+
+                        <div class="bor8 m-b-20 how-pos4-parent">
+                            <!-- <label for="email">Email</label> -->
+                            <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="email" name="email" placeholder="{{dato[3]}}" disabled>
+                            <img class="how-pos4 pointer-none" src="{{url_for('static',filename='images/icons/icon-email.png')}}" alt="ICON">
+                        </div>
+                        <div class="bor8 m-b-20 how-pos4-parent">
+                            <label for="exampleFormControlSelect2 stext-111 cl2 plh3 size-116 p-l-62 p-r-30">Desea Asignar un nuevo Rol</label>
+                            <select class="custom-select stext-111 cl2 plh3 size-116 p-l-62 p-r-30" id="listadorol" name="rol">
+                               
+                               
+                            </select>
+                        </div>
+
+
+
+
+                    <button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+                        Guardar Cambios
+                    </button>
+                    <br>
+
+                </form>
+                <a class="flex-c-m stext-101 cl0 size-121 bg5 bor1 hov-btn3 p-lr-15 trans-04 pointer " href="{{url_for('AdminUser')}}">
+                    Regresar</a>
+                
+            </div>
+            <!-- Quitar -->
+            <div class="size-210 bor10 flex-w flex-col-m p-lr-93 p-tb-30 p-lr-15-lg w-full-md">
+                <img class="size-120 " src="{{url_for('static',filename='images/about-01.jpg')}}" alt="imagenbonita">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    window.onload = function () {
+        roles();
+    }
+</script>
+
+
+{% endblock %}

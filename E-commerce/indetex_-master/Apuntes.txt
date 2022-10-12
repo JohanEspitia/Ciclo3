@@ -1,0 +1,62 @@
+para crear un env
+
+virtualenv -p python3 env
+caulquiera de los comandos
+python -m venv env
+
+entramos a la ruta 
+.\env\Scripts\activate
+
+instalamos flask
+pip install flask
+ corremos el freeze
+pip freeze
+
+
+Para correr el flask
+set FLASK_APP=app.py
+flask run
+
+Para que se reflejen los cambios
+
+set FLASK_ENV=development
+
+
+
+
+app.py 
+from flask import Flask
+app=Flask(__name__)
+
+# Creación de Rutas
+@app.route('/')
+def index():
+        return '<h1>Hola Mundo</h1>'
+
+
+
+if __name__=="__main__":
+    app.run(debug=True)
+
+
+Enviar datos desde la Ruta 
+@app.route('/')
+def index():
+	curso=['PHP','Python','Java','Kotlin','Dart','JavaScript']
+	data={
+	   'titulo':'index123'
+	   'bienvenido':'Saludos'
+	   'curso':curso
+	   'numero_curso': len(curso)
+	}
+	return render_template('index',data=data)
+
+
+
+
+
+Creación Correos Electronicos 
+
+git remote add origin https://github.com/jessvillrom/indetex_.git
+git branch -M main
+git push -u origin main

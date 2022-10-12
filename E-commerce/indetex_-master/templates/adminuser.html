@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<pre>
+
+
+
+</pre>
+<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('static/images/bg-02.jpg');">
+    <h2 class="ltext-105 cl0 txt-center">
+        Gestión de Usuarios
+    </h2>
+</section>
+<br>
+
+<div class="container">
+
+    <h3>Gestión de Usuarios</h3>
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Email</th>
+                <th scope="col">Rol</th>
+                <th scope="col">Accesos</th>
+            </tr>
+        </thead>
+        <tbody id="listado">
+
+        </tbody>
+    </table>
+
+
+    <script>
+        window.onload = function () {
+            verdatos();
+        }
+    </script>
+
+</div>
+
+{%endblock %}

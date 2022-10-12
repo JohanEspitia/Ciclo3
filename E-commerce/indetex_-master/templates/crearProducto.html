@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+    <!-- Title page -->
+    <section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('static/images/bg-01.jpg');">
+        <h2 class="ltext-105 cl0 txt-center">
+            Añadir un nuevo productos
+        </h2>
+    </section>
+
+
+    <!-- Content page     -->
+    <section class="bg0 p-t-104 p-b-116">
+        <div class="container">
+            <div class="flex-w flex-tr">
+                <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+                    <form action="guardarproducto" method="post">
+                        <h4 class="mtext-105 cl2 txt-center p-b-30">
+                            Nuevo Producto
+                        </h4>
+                        <div>
+                                <div class=" mtext-102 class-group">
+                                    <label for="">Categoria</label>
+                                    <div class="bor8 m-b-20 how-pos4-parent">
+                                        <select class="custom-select stext-111 cl2 plh3 size-116 p-l-62 p-r-30"  name="categoria">
+                                            <option selected disabled>Seleccione una Categoria</option>
+                                            <option value="Calzado">Calzado</option>
+                                            <option value="Camisas">Camisas</option>
+                                            <option value="Jean">Jean</option>
+                                                                                </select>
+                                    </div>
+                                </div>
+
+                                    <div class=" mtext-102 class-group">
+                                        <label for="">Productos en Stock </label>
+                                        <div class="bor8 m-b-20 how-pos4-parent">
+                                            <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="number" name="stock" placeholder="25">
+                                            <img class="how-pos4 pointer-none" src="{{url_for('static',filename='images/icons/icon-stock.png')}}" alt="ICON" height="25"
+                                                style="opacity:0.25;">
+                                        </div>
+                                    </div>
+                                <div class=" mtext-102 class-group">
+                                    <label for=""> Nombre del Producto </label>
+                                    <div class="bor8 m-b-20 how-pos4-parent">
+                                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="nombre_producto"
+                                            placeholder="Lightweight Jacket">
+                                        <img class="how-pos4 pointer-none" src="{{url_for('static',filename='images/icons/icon-rompa.png')}}" alt="ICON" height="25"
+                                            style="opacity:0.25;">
+                                    </div>
+                                </div>
+                                
+                                <div class=" mtext-102 class-group">
+                                    <label for=""> Precio de Producto </label>
+                                    <div class="bor8 m-b-20 how-pos4-parent">
+                                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="number" name="precio"
+                                            placeholder="58.79">
+                                        <img class="how-pos4 pointer-none" src="{{url_for('static',filename='images/icons/icon-precio.png')}}" alt="ICON" height="25"
+                                            style="opacity:0.25;">
+                                    </div>
+                                </div>
+                                <div class="bor8 m-b-20 how-pos4-parent ">
+                                    <div class="p-t-33">
+                                        <div class="flex-w flex-r-m p-b-10">
+                                            <div class="size-203 flex-c-m respon6">
+                                                Talla
+                                            </div>
+                                
+                                            <div class="size-204 respon6-next">
+                                                <div class="rs1-select2 bor8 bg0">
+                                                    <select class="js-select2" name="talla">
+                                                        <option disabled selected>Seleccione la talla</option>
+                                                        <option value="s"> S</option>
+                                                        <option value="m"> M</option>
+                                                        <option value="l"> L</option>
+                                                        <option value="xl"> XL</option>
+                                                    </select>
+                                                    <div class="dropDownSelect2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bor8 m-b-20 how-pos4-parent">
+                                    <div class="p-t-33">
+                                        <div class="flex-w flex-r-m p-b-10">
+                                            <div class="size-203 flex-c-m respon6">
+                                                Color
+                                            </div>
+                                
+                                            <div class="size-204 respon6-next">
+                                                <div class="rs1-select2 bor8 bg0">
+                                                    <select class="js-select2" name="color">
+                                                        <option  disabled selected>Seleccione el color</option>
+                                                        <option value="rojo">Rojo</option>
+                                                        <option value="amarillo">Amarillo</option>
+                                                        <option value="blanco">Blanco</option>
+                                                        <option value="gris">Gris</option>
+                                                    </select>
+                                                    <div class="dropDownSelect2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class=" mtext-102 class-group">
+                                    <label for=""> Descripción del Producto Fabricado por Indetex </label>
+                                    <div class="bor8 m-b-20 how-pos4-parent">
+                                        <div class="bor8 m-b-30">
+                                            <textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="desProducto"
+                                                placeholder="Prenda en algodón "></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" mtext-102 class-group">
+                                    <label for=""> Agregar Imagen </label>
+                                    <div class="bor8 m-b-20 how-pos4-parent">
+                                        <div class="bor8 m-b-30">
+                                        <input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="file" name="imagen"  accept="image/png, image/jpeg">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            
+
+
+                        </div>
+
+
+
+
+                        <br>
+                        <!-- </div> -->
+
+                        <!-- <div class="bor8 m-b-30">
+                            <textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg"
+                                placeholder="How Can We Help?"></textarea>
+                        </div> -->
+
+
+                        <button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+                            Añadir Producto
+                        </button>
+                        <br>
+                        <a class="flex-c-m stext-101 cl0 size-121 bg5 bor1 hov-btn3 p-lr-15 trans-04 pointer "
+                            href="adminProduct.html">Ver Productos </a>
+
+                    </form>
+                </div>
+                <!-- Quitar -->
+                <div class="size-210 bor10 flex-w flex-col-m p-lr-93 p-tb-30 p-lr-15-lg w-full-md">
+                    <img class="size-120 " src="{{url_for('static',filename='images/blog-01.jpg')}}" alt="imagenbonita">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
